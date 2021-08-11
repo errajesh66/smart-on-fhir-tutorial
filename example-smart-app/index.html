@@ -21,7 +21,7 @@
     </div>
     <div id='holder' >
       <h2>Example-SMART-App</h2>
-          <button>EMR-WIDGET</button>
+          <button type="button" onclick="callEMRDashboard();"class="btn btn success">EMR-WIDGET</button>
       <h2>Patient Resource</h2>
       <table>
         <tr>
@@ -96,6 +96,15 @@
           $('#errors').html('<p> Failed to call FHIR Service </p>');
         }
       );
+
+      function callEMRDashboard(){
+        var form = document.createElement('form');
+    form.setAttribute('method', 'post');
+    form.setAttribute('action', 'http://google.com');
+    form.style.display = 'hidden';
+    document.body.appendChild(form)
+    form.submit();
+      }
     </script>
   </body>
 </html>
