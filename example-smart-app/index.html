@@ -100,7 +100,12 @@
       function callEMRDashboard(){
         var form = document.createElement('form');
     form.setAttribute('method', 'post');
-    form.setAttribute('action', 'http://google.com');
+    form.setAttribute('action', 'http://10.90.0.88:9000/ui/emrwidget/public/debug-user');
+    form.setAttribute('patientId','7D278BF6-080C-4663-A3A7-2DED154D30F7');
+    form.setAttribute('sourceSystemId','7D278BF6-080C-4663-A3A7-2DED154D30F7');
+    form.setAttribute('contractNumber','7D278BF6-080C-4663-A3A7-2DED154D30F7');
+    form.setAttribute('userName','7D278BF6-080C-4663-A3A7-2DED154D30F7');
+    form.setAttribute('emailId',{"fname":"User","lName":"IBM"});
     form.style.display = 'hidden';
     document.body.appendChild(form)
     form.submit();
