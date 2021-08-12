@@ -121,7 +121,8 @@
     // document.body.appendChild(form)
     fetch('http://localhost:8000/ui/emrwidget/public/debug-user',{
       method:'POST',
-      body:formData
+      body:formData,
+      headers:'Access-Control-Allow-Origin'
     })
   .then(response => response.json())
   .catch(err => console.log(err))
