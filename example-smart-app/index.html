@@ -119,9 +119,13 @@
     // form.setAttribute('emailId',{"fname":"User","lName":"IBM"});
     // form.style.display = 'hidden';
     // document.body.appendChild(form)
-    fetch('https://cors-anywhere.herokuapp.com/http://localhost:8000/ui/emrwidget/public/debug-user',{
+    // https://cors-anywhere.herokuapp.com/
+    fetch('http://localhost:8000/ui/emrwidget/public/debug-user',{
       method:'POST',
-      body:formData
+      body:formData,
+      mode:'cors',
+      cache:'no-cache',
+      credentials:'same-origin'
     })
   .then(response => response.json())
   .catch(err => console.log(err))
