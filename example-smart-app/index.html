@@ -102,13 +102,13 @@
       );
 
       function callEMRDashboard(){
-        var formData = new FormData();
-         var fileField = document.querySelector("input[type='file']");
-          formData.append('patientId','7D278BF6-080C-4663-A3A7-2DED154D30F7');
-          formData.append('sourceSystemId','NGEN');
-          formData.append('contractNumber','ARCH001');
-          formData.append('userName','EpicUser001');
-          formData.append('emailId',"{'fname':'User','lName':'IBM'}")
+        // var formData = new FormData();
+        //  var fileField = document.querySelector("input[type='file']");
+        //   formData.append('patientId','7D278BF6-080C-4663-A3A7-2DED154D30F7');
+        //   formData.append('sourceSystemId','NGEN');
+        //   formData.append('contractNumber','ARCH001');
+        //   formData.append('userName','EpicUser001');
+        //   formData.append('emailId',"{'fname':'User','lName':'IBM'}")
         // var form = document.createElement('form');
     // form.setAttribute('method', 'post');
     // form.setAttribute('action', 'http://10.90.0.88:9000/ui/emrwidget/secure/dashboard');
@@ -120,17 +120,24 @@
     // form.style.display = 'hidden';
     // document.body.appendChild(form)
     // https://cors-anywhere.herokuapp.com/
-    fetch('http://www.google.com',{
-      method:'GET'
-      // body:formData,
-      // mode:'cors',
-      // cache:'no-cache',
-      // credentials:'same-origin'
-    })
-  .then(response => response.json())
-  .catch(err => console.log(err))
+  //   fetch('http://www.google.com',{
+  //     method:'GET'
+  //     // body:formData,
+  //     // mode:'cors',
+  //     // cache:'no-cache',
+  //     // credentials:'same-origin'
+  //   })
+  // .then(response => response.json())
+  // .catch(err => console.log(err))
     
-      }
+  //    
+  var form = document.createElement('form');
+    form.setAttribute('method', 'get');
+    form.setAttribute('action', 'http://google.com');
+    form.style.display = 'hidden';
+    document.body.appendChild(form)
+    form.submit();
+}
     </script>
   </body>
 </html>
