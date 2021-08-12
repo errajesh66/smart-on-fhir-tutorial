@@ -120,12 +120,12 @@
     // form.style.display = 'hidden';
     // document.body.appendChild(form)
     // https://cors-anywhere.herokuapp.com/
-    fetch('http://localhost:8000/ui/emrwidget/public/debug-user',{
-      method:'POST',
-      body:formData,
-      mode:'cors',
-      cache:'no-cache',
-      credentials:'same-origin'
+    fetch('http://localhost:8000/ui/emrwidget/public/epic-launch',{
+      method:'GET'
+      // body:formData,
+      // mode:'cors',
+      // cache:'no-cache',
+      // credentials:'same-origin'
     })
   .then(response => response.json())
   .catch(err => console.log(err))
