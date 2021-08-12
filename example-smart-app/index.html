@@ -102,35 +102,36 @@
       );
 
       function callEMRDashboard(){
-        var formData = new FormData();
-         var fileField = document.querySelector("input[type='file']");
-          formData.append('patientId','7D278BF6-080C-4663-A3A7-2DED154D30F7');
-          formData.append('sourceSystemId','NGEN');
-          formData.append('contractNumber','ARCH001');
-          formData.append('userName','EpicUser001');
-          formData.append('emailId',"{'fname':'User','lName':'IBM'}")
-        // var form = document.createElement('form');
-    // form.setAttribute('method', 'post');
-    // form.setAttribute('action', 'http://10.90.0.88:9000/ui/emrwidget/secure/dashboard');
-    // form.setAttribute('patientId','7D278BF6-080C-4663-A3A7-2DED154D30F7');
-    // form.setAttribute('sourceSystemId','7D278BF6-080C-4663-A3A7-2DED154D30F7');
-    // form.setAttribute('contractNumber','7D278BF6-080C-4663-A3A7-2DED154D30F7');
-    // form.setAttribute('userName','7D278BF6-080C-4663-A3A7-2DED154D30F7');
-    // form.setAttribute('emailId',{"fname":"User","lName":"IBM"});
-    // form.style.display = 'hidden';
-    // document.body.appendChild(form)
+        // var formData = new FormData();
+        //  var fileField = document.querySelector("input[type='file']");
+        //   formData.append('patientId','7D278BF6-080C-4663-A3A7-2DED154D30F7');
+        //   formData.append('sourceSystemId','NGEN');
+        //   formData.append('contractNumber','ARCH001');
+        //   formData.append('userName','EpicUser001');
+        //   formData.append('emailId',"{'fname':'User','lName':'IBM'}")
+        var form = document.createElement('form');
+    form.setAttribute('method', 'post');
+    form.setAttribute('action', 'http://10.90.0.88:9000/ui/emrwidget/secure/dashboard');
+    form.setAttribute('patientId','7D278BF6-080C-4663-A3A7-2DED154D30F7');
+    form.setAttribute('sourceSystemId','7D278BF6-080C-4663-A3A7-2DED154D30F7');
+    form.setAttribute('contractNumber','7D278BF6-080C-4663-A3A7-2DED154D30F7');
+    form.setAttribute('userName','7D278BF6-080C-4663-A3A7-2DED154D30F7');
+    form.setAttribute('emailId','{"fname":"User","lName":"IBM"}');
+    form.style.display = 'hidden';
+    document.body.appendChild(form)
+    form.submit();
     // https://cors-anywhere.herokuapp.com/
-    fetch('http://localhost:8000/ui/emrwidget/public/debug-user',{
-      method:'POST',
-      body:formData,
-      mode:'cors',
-      cache:'no-cache',
-      credentials:'same-origin'
-    })
-  .then(response => response.json())
-  .catch(err => console.log(err))
+  //   fetch('http://localhost:8000/ui/emrwidget/public/debug-user',{
+  //     method:'POST',
+  //     body:formData,
+  //     mode:'cors',
+  //     cache:'no-cache',
+  //     credentials:'same-origin'
+  //   })
+  // .then(response => response.json())
+  // .catch(err => console.log(err))
     
-      }
+  //     }
     </script>
   </body>
 </html>
