@@ -17411,6 +17411,7 @@ BBClient.authorize = function(params, errback){
     sessionStorage[state] = JSON.stringify(params);
 
     console.log("sending client reg", params.client);
+  console.log("$$$$$authorize_uri"+params.provider.oauth2.authorize_uri);
 
     var redirect_to=params.provider.oauth2.authorize_uri + "?" + 
       "client_id="+encodeURIComponent(client.client_id)+"&"+
@@ -17419,6 +17420,8 @@ BBClient.authorize = function(params, errback){
       "redirect_uri="+encodeURIComponent(client.redirect_uri)+"&"+
       "state="+encodeURIComponent(state)+"&"+
       "aud="+encodeURIComponent(params.server);
+	  
+	  console.log("$$$$$redirect_to"+redirect_to);
     
     if (typeof client.launch !== 'undefined' && client.launch) {
        redirect_to += "&launch="+encodeURIComponent(client.launch);
