@@ -17140,6 +17140,7 @@ BBClient.settings = {
 * @return boolean
 */
 function validTokenResponse() {
+	debugger;
   if (BBClient.settings.fullSessionStorageSupport && sessionStorage.tokenResponse) {
     return true;
   } else {
@@ -17165,7 +17166,7 @@ function isFakeOAuthToken(){
 BBClient.ready = function(input, callback, errback){
 
   var args = readyArgs.apply(this, arguments);
-
+debugger;
   // decide between token flow (implicit grant) and code flow (authorization code grant)
   var isCode = urlParam('code') || (args.input && args.input.code);
 
@@ -17272,7 +17273,7 @@ function providers(fhirServiceUrl, provider, callback, errback){
     });
     return;
   }
-
+debugger;
   Adapter.get().http({
     method: "GET",
     url: stripTrailingSlash(fhirServiceUrl) + "/metadata"
